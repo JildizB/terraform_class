@@ -4,11 +4,6 @@ variable region {
   description = "region"
 }
 
-variable number_of_instances {
-  type        = number
-  default     = 1
-  description = "number of ec2 instances"
-}
 
 variable instance_ami {
   type        = string
@@ -26,4 +21,9 @@ variable instance_name {
   type        = string
   default     = "ec2-instance"
   description = "ec2 instance name"
+}
+
+variable sg_id {
+  type        = list(string)
+  description = "sg for ec2 instance"
 }

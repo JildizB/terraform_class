@@ -16,9 +16,12 @@ data "aws_ami" "ubuntu" {
 
 module "ec2_module" {
     source = "./ec2_module"
-    region = "us-east-2"
-    number_of_instances = 3
+    region = "us-east-1"
     instance_ami = data.aws_ami.ubuntu.id
-    instance_type = "t3.micro"
     instance_name = "module-ec2"
+    sg_id = [aws_security_group.example.id]
+}
+
+output "public_ip" {
+    value = module.ec2_module.public-Ip
 }
