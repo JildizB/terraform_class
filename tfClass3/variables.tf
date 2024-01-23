@@ -38,3 +38,9 @@ variable sg_name {
   default     = "as-name"
   description = "defualt sg name"
 }
+
+variable name_profix {
+  type        = string
+  default     = "my-launch"
+  description = "description"
+}

@@ -16,7 +16,7 @@ data "aws_ami" "ubuntu" {
 
 
 resource "aws_launch_template" "my-launch-temp" {
-  name_prefix                 = "my-launch"
+  name_prefix                 = var.name_prefix
   image_id                    = data.aws_ami.ubuntu.id
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.deployer.key_name
