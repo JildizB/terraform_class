@@ -28,11 +28,11 @@ variable min_size {
   description = "min size for ASG"
 }
 
-variable key_name {
-  type        = string
-  default     = "mylaptop-key"
-  description = "keypair name"
-}
+# variable key_name {
+#   type        = string
+#   default     = "mylaptop-key"
+#   description = "keypair name"
+# }
 variable sg_name {
   type        = string
   default     = "as-name"

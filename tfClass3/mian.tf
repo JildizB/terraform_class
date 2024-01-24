@@ -44,8 +44,8 @@ resource "aws_autoscaling_group" "asg" {
   }
 }
 
-# create keypair 
-resource "aws_key_pair" "deployer" {
-  key_name   = var.key_name
-  public_key = file("~/.ssh/id_rsa.pub")
-}
+# # create keypair 
+# resource "aws_key_pair" "deployer" {
+#   key_name   = var.key_name
+#   public_key = filebase64("~/.ssh/id_rsa.pub")
+# }

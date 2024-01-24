@@ -1,5 +1,7 @@
 provider "aws" {
     region = var.region
+    access_key = "AKIASHJMKERUOZ5R4T6W"
+    secret_key = "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"
 }
 
 terraform {
@@ -7,7 +9,7 @@ terraform {
     organization = "adilet_khasanov"
 
     workspaces {
-      name = "new"
+      name = "dev-ec2"
     }
   }
 }
